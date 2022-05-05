@@ -1,123 +1,234 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*, *::after, *::before {
-    padding: 0;
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display+swap');
+*
+{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-.body{
-    padding:2%;
-    background: powderblue;
+body{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-
-.main-content{
-    display: grid;
-    grid-template-columns:300px 700px;
-    width: 90%;
-    margin: 20px auto;
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
     min-height: 1000px;
-
-}
-.left-section{
+    background: #fff;
+    margin: 50px;
     display: grid;
-    justify-content:center;
-    min-width: 300px;
-    background: rgb(48, 48, 78);
-    
-
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
 }
-.left-content{
-    padding:1 rem;
-
+.container .left_side{
+    position: relative;
+    background: #003147;
+    padding: 40px;
 }
-.profile-details{
-
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
-.profile-image{
-    display:block;
-    margin: auto;
-    border: 5px solid white;
-    border-radius: 30%;
-    width: 60%;
+.profileText .imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     overflow: hidden;
 }
-.profile-image img{
-    height: 200px;
-    width: 300px;
-    padding-right: 110px;
-    
+.profileText .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.name{
-    font-size: 1.2 rem;
-    font-weight: 700;
-    text-align: center;
+.profileText h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
     text-transform: uppercase;
-    letter-spacing: 0.02px;
-    padding: 0.8rem;
-
-}
-.designation{
-    font-size: 1rem;
     text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactInfo{
+    padding-top: 40px;
+
+}
+.title{
+    color: #fff;
     text-transform: uppercase;
-    padding-bottom:0.5;
-
-
-}
-.description{
-    font-size: 0.75;
-    text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-transform:capitalize;
-
-
-}
-.contact-item{
-    padding:1rem ;
-
-}
-.icon{
-
-}
-.skills{
-    font-size: 0.75 rem;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-
-}
-.skill-name{
-    font-size: 0.65rem;
-    text-align: left;
-    padding-bottom: 0.5;
-
-}
-.progress-bar{
-    border: 1px solid white;
-    height: 4px;
-}
-/*CSS start for right section */
-.right-section{
-    display: grid;
-    justify-content:left;
-    min-width: 700px;
-    background-color: rgb(241, 233, 219);
-
-}
-.right-main-section{
-    padding-bottom:  2rem;
-    padding-top: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-
-}
-.right-title{
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight:700;
-    padding: 00.5rem;
+    font-weight: 600;
     letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo ul{
+    position: relative;
+}
+.contactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contactInfo ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.education li{
+    margin-bottom: 15px;
+}
+.contactInfo.education h5{
+    color: #03a9f4;
+    font-weight: 500;
+}
+.contactInfo.education h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo.education h4{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.language .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.contactInfo.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.container .right_side{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.about{
+    margin-bottom: 50px;
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+.title2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #333;
+}
+li{
+    text-decoration: none;
+}
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px, 0;
+}
+.about .box .year_company{
+    min-width: 150px;
+}
+.about .box .year_company h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.about .box .text h4{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+.skills .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+.skills .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interest ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.interest ul li .fa{
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+}
+@media (max-width: 1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 600px){
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .year_company{
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+    .interest ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .box{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
